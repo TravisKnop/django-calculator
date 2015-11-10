@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <div><h1>Welcome to the Django Calcutron2000</h1></div>
+    <div class = "container-fluid">
+        <form action="">
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter a number" name="num_a">
+            </div>
+
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-group-lg">
+                    <input type="radio" id="q156" name="function" value="+" /> +
+                </label>
+                <label class="btn btn-group-lg">
+                    <input type="radio" id="q157" name="function" value="-" /> -
+                </label>
+                <label class="btn btn-group-lg">
+                    <input type="radio" id="q158" name="function" value="*" /> *
+                </label>
+                <label class="btn btn-group-lg">
+                    <input type="radio" id="q159" name="function" value="/" /> /
+                </label>
+                <label class="btn btn-group-lg">
+                    <input type="radio" id="q160" name="function" value="**" /> **
+                </label>
+            </div>
+
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Enter a number" name="num_b">
+            </div>
+            <button type="submit" class="btn btn-primary">Perform Function</button>
+       </form>
+        </br>
+        <div class="container">{{ response }}</div>
+    </div>
+</body>
+</html>
